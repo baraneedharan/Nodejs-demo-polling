@@ -1,0 +1,32 @@
+!!! 5
+html(lang="en")
+  head
+    title Users
+
+
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    - if (typeof(flash) != 'undefined')
+      p(class='error')= flash
+    - if (typeof(flash1) != 'undefined')
+      p(class='success')= flash1
+
+    div(class='wrapper')
+      h1(class='demo-title') Welcome 
+      div(class='container')
+        div(class='register-container')
+          h2 Register
+          form(method='post', action='/admin', class='admin-form')
+            button(type='submit', class='floatright admin-login') Admin-login
+          form(method='post', action='/register')
+            label(class='label') Username:
+            input(name='username', type='text')
+            br
+            br
+            label(class='label') Email:
+            input(name='email', type='text')
+            br
+            br
+            button(type='submit', class='floatright create-account') Register
+            div(class='clear')
+        div(class='clear')

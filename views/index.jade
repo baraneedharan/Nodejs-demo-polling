@@ -1,0 +1,22 @@
+!!! 5
+html(lang="en")
+  head
+    title Users
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(type='text/javascript', src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js')
+    script(type='text/javascript', src="/javascript/main.js")
+  body
+    - if (typeof(flash) != 'undefined')
+      p= flash
+    div(class='wrapper pad10')
+      h2 You have successfully registered for polling
+      p Poll for your candidate
+      form(method='post', action='/polled')
+        ol(id = 'testing')
+          li Name1
+            input(type='radio', name='candidate', value = 'val1')
+          li Name2
+            input(type='radio', name='candidate', value = 'val2')    
+          li Name3
+            input(type='radio', name='candidate', value = 'val3')   
+        button(type='submit', class='floatright create-account') Poll 

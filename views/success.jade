@@ -1,0 +1,10 @@
+!!! 5
+html(lang="en")
+  head
+    title Users
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    div(class='wrapper pad10')
+      h2 You have successfully polled for your candidate
+      - if (typeof(flash) != 'undefined')
+        p= flash

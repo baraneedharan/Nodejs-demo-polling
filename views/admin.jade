@@ -1,0 +1,28 @@
+!!! 5
+html(lang="en")
+  head
+    title Users
+
+
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    - if (typeof(flash) != 'undefined')
+      p(class='error')= flash
+
+    div(class='wrapper')
+      h1(class='demo-title') Welcome 
+      div(class='container')
+        div(class='register-container')
+          h2 Admin Login 
+          form(method='post', action='/admin-enter')
+            label(class='label') Username:
+            input(name='adminname', type='text')
+            br
+            br
+            label(class='label') Password:
+            input(name='password', type='password')
+            br
+            br
+            button(type='submit', class='floatright create-account') Enter
+            div(class='clear')
+        div(class='clear')
